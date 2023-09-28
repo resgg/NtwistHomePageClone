@@ -18,7 +18,6 @@ function App() {
     homeTitleTwo="for Industrial Excellence"
     homeLink="Read More"
     href="#"
-    
     />
     <Rightside 
      imgSrcRight="https://ntwist.com/wp-content/uploads/2023/01/iStock-1339284457-scaled.jpg"

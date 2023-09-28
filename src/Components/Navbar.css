@@ -1,0 +1,130 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+  color: white;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  margin-right: 10px;
+  font-size: 22px;
+  margin-left: 34px;
+}
+
+.navbar-items {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 80px;
+}
+
+.navbar-items li {
+  font-size: 18px;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  vertical-align: baseline;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.navbar.scrolling li,
+.navbar.scrolling {
+  color: #003358;
+  background-color: #FFFFFF;
+}
+
+.navbar-items {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 80px;
+}
+
+.navbar-items {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 80px;
+}
+
+.navbar-items li {
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  vertical-align: baseline;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.navbar-items li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #003358;
+  transition: width 0.3s ease;
+}
+
+.navbar-items li:first-child::before {
+  width: 100%;
+}
+
+.navbar-items li:not(:first-child):hover::before {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .navbar-logo {
+    font-size: 18px;
+  }
+
+  .navbar-items {
+    margin-right: 30px;
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
